@@ -23,7 +23,7 @@ class BaseLayout extends Component {
     width: window.innerWidth,
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     window.addEventListener('load', this.screenSizeOnloadHandler);
     window.addEventListener('resize', this.screenSizeResizeHandler);
   }

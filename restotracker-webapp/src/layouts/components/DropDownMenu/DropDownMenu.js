@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Menu, Dropdown, Icon } from 'antd';
 import { connect } from 'react-redux';
-import { logout } from 'actions/actions';
+import { logout } from '../../../actions/actions';
 import { withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';

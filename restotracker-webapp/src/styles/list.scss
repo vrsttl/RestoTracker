@@ -1,0 +1,233 @@
+@import 'src/styles/colors';
+@import 'src/styles/breakpoints';
+
+.ant-layout-content { 
+  .main-wrapper {
+    .search-bar {
+      height: 30px;
+      width: 70%;
+      padding: 12px 15px;
+      border: 1px solid rgb(204, 204, 204);
+      border-radius: 4px;
+      margin: 0 15%;
+      &:hover {
+        border: 1px solid rgb(179, 179, 179);
+      }
+    }
+    .tab-line-wrapper {
+      position: relative;
+
+      .ant-tabs-nav .ant-tabs-tab-active {
+        color: white;
+      }
+      
+      .ant-tabs-ink-bar {
+        background-color: white;
+        height: 4px;
+        border-radius: 2px;
+      } 
+      .ant-tabs-tab:hover {
+        color: #1f1e1e;
+      }
+      .ant-tabs-bar {
+        background: #3699FC;
+        color: whitesmoke;
+        padding-left: 30px;
+      }
+
+        .ant-btn-primary {
+          position: absolute;
+          right: 60px;
+          top: 24px;
+          background-color: #f0f2f5;
+          color: #3699FC;
+          font-weight: 900;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            background-color: whitesmoke;
+            box-shadow: 1px 1px 1px #3699FC;
+          }
+        }
+    }
+
+    .tab-line-wrapper {
+      position: relative;
+
+      .ant-tabs-nav .ant-tabs-tab-active {
+        color: white;
+      }
+      
+      .ant-tabs-ink-bar {
+        background-color: white;
+        height: 4px;
+        border-radius: 2px;
+      } 
+      .ant-tabs-tab:hover {
+        color: #1f1e1e;
+      }
+      .ant-tabs-bar {
+        background: #3699FC;
+        color: whitesmoke;
+        padding-left: 30px;
+      }
+
+        .ant-btn-primary {
+          position: absolute;
+          right: 60px;
+          top: 24px;
+          background-color: #f0f2f5;
+          color: #3699FC;
+          font-weight: 900;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            background-color: whitesmoke;
+            box-shadow: 1px 1px 1px #3699FC;
+          }
+        }
+    }
+
+    .ant-table-wrapper {
+      .ant-spin-nested-loading {
+        .ant-spin-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .ant-table {
+            width: 90%;
+              table {
+                border-spacing: 0 10px;
+                white-space: nowrap;
+              }
+              .ant-table-content {
+                .ant-table-body {
+                  font-family: "Open Sans"; 
+                  border-collapse: collapse; 
+                  border-radius: 18px;
+
+                  table {
+                    border-spacing: 0 10px;
+
+                    .ant-table-thead {
+                      tr {
+                        
+                        th {
+                          background-color: #f0f2f5;
+                          border: 0;
+                          font-family: 'Poppins'; 
+                          font-weight: 600; 
+                          font-size: 16px; 
+                          color: #929292; 
+                        }
+
+                        th.column-upXl {
+                          @include media-breakpoint-up(xs) {
+                            display: none;
+                          }
+                          @include media-breakpoint-up(sm) {
+                            display: none;
+                          }
+                          @include media-breakpoint-up(xl) {
+                            display: table-cell;
+                          }
+                        }
+                        th.column-upMd {
+                          @include media-breakpoint-up(xs) {
+                            display: none;
+                          }
+                          @include media-breakpoint-up(sm) {
+                            display: none;
+                          }
+                          @include media-breakpoint-up(md) {
+                            display: table-cell;
+                          }
+                        }
+                        th.column-upLg {
+                          @include media-breakpoint-up(xs) {
+                            display: none;
+                          }
+                          @include media-breakpoint-up(sm) {
+                            display: none;
+                          }
+                          @include media-breakpoint-up(lg) {
+                            display: table-cell;
+                          }
+                        }
+                      }
+                    }
+
+                    .ant-table-tbody {
+                      .ant-table-row {
+                        background-color: #ffffff;
+
+                        :first-child {
+                          border-top-left-radius: 12px;
+                          border-bottom-left-radius: 12px;
+                        }
+
+                        :last-child {
+                          border-top-right-radius: 12px;
+                          border-bottom-right-radius: 12px;
+                        }
+
+                        td i {
+                          font-size: 24px;
+                          font-weight: 900;
+                        }
+
+                        td.column-upXl {
+                          @include media-breakpoint-up(sm) {
+                            display: none;
+                          }
+                          @include media-breakpoint-up(xl) {
+                            display: table-cell;
+                          }
+                        }
+                        td.column-upMd {
+                          @include media-breakpoint-up(sm) {
+                            display: none;
+                          }
+                          @include media-breakpoint-up(md) {
+                            display: table-cell;
+                          }
+                        }
+                        // td.column-upXl {
+                        //   @include media-breakpoint-up(sm) {
+                        //     display: none;
+                        //   }
+                        //   @include media-breakpoint-up(xl) {
+                        //     display: table-cell;
+                        //   }
+                        // }
+                        td.column-upLg {
+                          @include media-breakpoint-up(sm) {
+                            display: none;
+                          }
+                          @include media-breakpoint-up(lg) {
+                            display: table-cell;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }.ant-pagination.ant-table-pagination{
+            @include media-breakpoint-up(sm) {
+              display: none;
+            }
+            @include media-breakpoint-up(md) {
+              display: block;
+            }
+        }
+      }
+    }
+  }
+} 

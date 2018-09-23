@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Menu, Dropdown } from 'antd';
 import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import { setCurrentComponent } from '../../../actions/actions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -53,6 +54,10 @@ class PageSelectorMenu extends Component {
     );
   }
 }
+
+PageSelectorMenu.propTypes = {
+  setCurrentComponent: PropTypes.func.isRequired,
+};
 
 function mapStateToProps(store) {
   return {

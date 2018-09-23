@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BaseLayout from 'layouts/BaseLayout/BaseLayout';
+import BaseLayout from '../layouts/BaseLayout/BaseLayout';
 import { Table } from 'antd';
 
 export default function asyncComponent(importComponent, componentName) {

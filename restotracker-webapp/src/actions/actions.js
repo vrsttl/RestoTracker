@@ -15,9 +15,22 @@ export function login(values) {
   };
 }
 
+export function logout() {
+  return {
+    type: 'LOGOUT_REQUESTED',
+  };
+}
+
 export function setCurrentComponent(componentName) {
   return {
     type: 'COMPONENT_CHANGE_REQUESTED',
     payload: componentName,
+  };
+}
+
+export function updateDrawer(value) {
+  return {
+    type: 'DRAWER_UPDATE_REQUESTED',
+    value,
   };
 }
