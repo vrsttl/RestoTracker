@@ -36,3 +36,7 @@ The manager can filter and track data and send reports in email through the Mail
 # User Stories
 
 Challenging user stories will be detailed here.
+
+US 1 - Frontend backbone switched to React-Slingshot for convenience
+
+US 2 - Frontend: Basic url routing drawn up, store set up, redux-saga implemented, layouts deployed, authorization drawn up
