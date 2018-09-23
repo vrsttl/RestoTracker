@@ -1,0 +1,23 @@
+@import 'src/styles/colors';
+@import 'src/styles/breakpoints';
+
+.ant-layout {
+  height: 100%;
+  width: 100%;
+}
+
+.ant-layout .ant-layout-content { 
+  margin: 0; 
+}
+
+.login-layout {
+  min-height: 100%;
+  overflow-y: auto;
+  background: $LOGIN_BG;
+  display: flex;
+  justify-content: center;
+
+  @include media-breakpoint-up(lg) {
+    align-items: center;
+  }
+}
