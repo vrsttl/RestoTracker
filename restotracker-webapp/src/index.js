@@ -10,6 +10,8 @@ import './public/favicon.ico';
 
 const store = configureStore();
 
+console.log(Root);
+
 
 render(
   <AppContainer>

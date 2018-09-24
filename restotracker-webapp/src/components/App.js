@@ -5,11 +5,11 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import AsyncComponent from '../components/AsyncComponent';
 
 // const AsyncTable = AsyncComponent(() => import('containers/Table/Table'), this.props.match.params.id);
-const AsyncLoginPage = AsyncComponent(() => import('containers/LoginPage/LoginPage'));
+const AsyncLoginPage = AsyncComponent(() => import('../containers/LoginPage/LoginPage'));
 // const AsyncOpen = AsyncComponent(() => import('containers/OpenTables/OpenTables'));
 // const AsyncClosed = AsyncComponent(() => import('containers/ClosedTables/ClosedTables'));
 // const AsyncSummary = AsyncComponent(() => import('containers/Summary/Summary'));
-const AsyncNotFound = AsyncComponent(() => import('containers/NotFound/NotFound'));
+const AsyncNotFound = AsyncComponent(() => import('../containers/NotFound/NotFound'));
 
 
 const App = () => (

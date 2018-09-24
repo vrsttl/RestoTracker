@@ -45,7 +45,7 @@
     "react-redux": "5.0.7",
     "react-router-dom": "4.3.1",
     "react-router-prop-types": "^1.0.4",
-    "react-router-redux": "^4.0.8",
+    "react-router-redux": "5.0.0-alpha.6",
     "redux": "4.0.0",
     "redux-saga": "^0.16.0",
     "redux-thunk": "2.3.0"
@@ -55,6 +55,7 @@
     "@babel/core": "7.0.0",
     "@babel/node": "7.0.0",
     "@babel/plugin-proposal-class-properties": "7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-react-constant-elements": "7.0.0",
     "@babel/polyfill": "7.0.0",
     "@babel/preset-env": "7.0.0",
@@ -65,6 +66,7 @@
     "babel-jest": "23.4.2",
     "babel-loader": "8.0.0",
     "babel-plugin-transform-react-remove-prop-types": "0.4.15",
+    "babel-polyfill": "^6.26.0",
     "browser-sync": "2.24.7",
     "chalk": "2.4.1",
     "concurrently": "4.0.1",
@@ -86,6 +88,8 @@
     "jest": "23.5.0",
     "jest-cli": "23.5.0",
     "json-loader": "0.5.7",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
     "mini-css-extract-plugin": "0.4.2",
     "mockdate": "2.0.2",
     "node-sass": "4.9.3",
@@ -122,49 +126,6 @@
       "raf/polyfill",
       "./tools/enzymeTestAdapterSetup.js"
     ]
-  },
-  "babel": {
-    "env": {
-      "development": {
-        "presets": [
-          "@babel/preset-env",
-          "@babel/preset-react"
-        ],
-        "plugins": [
-          "@babel/plugin-proposal-class-properties",
-          "@babel/plugin-syntax-dynamic-import",
-          "react-hot-loader/babel"
-        ]
-      },
-      "production": {
-        "presets": [
-          [
-            "@babel/preset-env",
-            {
-              "targets": {
-                "ie": 9
-              },
-              "forceAllTransforms": true
-            }
-          ],
-          "@babel/preset-react"
-        ],
-        "plugins": [
-          "@babel/plugin-proposal-class-properties",
-          "@babel/plugin-transform-react-constant-elements",
-          "transform-react-remove-prop-types"
-        ]
-      },
-      "test": {
-        "presets": [
-          "@babel/preset-env",
-          "@babel/preset-react"
-        ],
-        "plugins": [
-          "@babel/plugin-proposal-class-properties"
-        ]
-      }
-    }
   },
   "eslintConfig": {
     "root": true,

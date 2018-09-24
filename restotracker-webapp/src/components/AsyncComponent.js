@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BaseLayout from '../layouts/BaseLayout/BaseLayout';
 import { Table } from 'antd';
 
-export default function asyncComponent(importComponent, componentName) {
+export function asyncComponent(importComponent, componentName) {
   class AsyncComponent extends Component {
     state = {
       component: null,
@@ -29,3 +29,5 @@ export default function asyncComponent(importComponent, componentName) {
   }
   return AsyncComponent;
 }
+
+export default asyncComponent;

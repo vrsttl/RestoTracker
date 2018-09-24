@@ -1,0 +1,49 @@
+{
+  "env": {
+    "development": {
+      "presets": [
+        "@babel/env",
+        "@babel/react"
+      ],
+      "plugins": [
+        "react-hot-loader/babel",
+        "@babel/transform-react-constant-elements",
+        "transform-react-remove-prop-types",
+        "@babel/plugin-syntax-dynamic-import",
+        "@babel/plugin-proposal-class-properties"
+      ]
+    },
+    "production": {
+      "presets": [
+        [
+          "env",
+          {
+            "es2015": {
+              "modules": false
+            },
+            "targets": {
+              "ie": 9,
+              "uglify": true
+            }
+          }
+        ],
+        "react",
+        "stage-1"
+      ],
+      "plugins": [
+        "react-hot-loader/babel",
+        "transform-react-constant-elements",
+        "transform-react-remove-prop-types",
+        "@babel/plugin-syntax-jsx",
+        "@babel/plugin-syntax-dynamic-import"
+      ]
+    },
+    "test": {
+      "presets": [
+        "env",
+        "react",
+        "stage-1"
+      ]
+    }
+  }
+}

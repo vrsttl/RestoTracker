@@ -10,7 +10,7 @@ const Root = ({ store, history }) => (
     <ConnectedRouter history={history}>
       <App />
     </ConnectedRouter>
-  </Provider>
+  </Provider >
 );
 
 Root.propTypes = {

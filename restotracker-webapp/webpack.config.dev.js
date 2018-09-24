@@ -1,7 +1,7 @@
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
-import HardSourceWebpackPlugin from 'hard-source-webpack-plugin'; 
+import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 
 export default {
   resolve: {
@@ -118,7 +118,20 @@ export default {
             }
           }
         ]
-      }
+      },
+      {
+        test: /\.less$/,
+        use: [{
+          loader: 'style-loader',
+        }, {
+          loader: 'css-loader',
+        }, {
+          loader: 'less-loader',
+          options: {
+            javascriptEnabled: true,
+          },
+        }],
+      },
     ]
   }
 };
