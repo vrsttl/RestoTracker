@@ -6,5 +6,5 @@
     "default": 10,
     "max": 50
   },
-  "mongodb": "mongodb://localhost:27017/restotracker_server"
+  "mongodb": "mongodb+srv://vrsttl:a1a1s1s1d1d1@restotracker-n5j9v.mongodb.net/test?retryWrites=true"
 }
