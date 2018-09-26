@@ -38,4 +38,7 @@ The manager can filter and track data and send reports in email through the Mail
 Challenging user stories will be detailed here.
 
 US 1 - Frontend backbone switched to React-Slingshot for convenience
+
 US 2 - Frontend: Basic url routing drawn up, store set up, redux-saga implemented, layouts deployed, authorization drawn up
+
+US 3 - Rearranging the data models so that it produces the smallest data tree possible. All relevant querying information is availabe from the orders model.
