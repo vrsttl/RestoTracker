@@ -11,7 +11,7 @@
       border-radius: 4px;
       margin: 0 15%;
       &:hover {
-        border: 1px solid rgb(179, 179, 179);
+        border: 1px solid rgb(186, 11, 41);
       }
     }
     .tab-line-wrapper {
@@ -27,10 +27,10 @@
         border-radius: 2px;
       } 
       .ant-tabs-tab:hover {
-        color: #1f1e1e;
+        color: rgb(186, 11, 41);
       }
       .ant-tabs-bar {
-        background: #3699FC;
+        background: rgb(211, 214, 22);
         color: whitesmoke;
         padding-left: 30px;
       }
@@ -40,7 +40,7 @@
           right: 60px;
           top: 24px;
           background-color: #f0f2f5;
-          color: #3699FC;
+          color: rgb(211, 214, 22);
           font-weight: 900;
           display: flex;
           flex-direction: column;
@@ -48,7 +48,7 @@
           align-items: center;
           &:hover {
             background-color: whitesmoke;
-            box-shadow: 1px 1px 1px #3699FC;
+            box-shadow: 1px 1px 1px rgb(168, 170, 20);
           }
         }
     }
@@ -66,10 +66,10 @@
         border-radius: 2px;
       } 
       .ant-tabs-tab:hover {
-        color: #1f1e1e;
+        color: rgb(186, 11, 41);
       }
       .ant-tabs-bar {
-        background: #3699FC;
+        background: rgb(211, 214, 22);
         color: whitesmoke;
         padding-left: 30px;
       }
@@ -78,8 +78,8 @@
           position: absolute;
           right: 60px;
           top: 24px;
-          background-color: #f0f2f5;
-          color: #3699FC;
+          background-color: #f4f5f0;
+          color: rgb(211, 214, 22);
           font-weight: 900;
           display: flex;
           flex-direction: column;
@@ -87,7 +87,7 @@
           align-items: center;
           &:hover {
             background-color: whitesmoke;
-            box-shadow: 1px 1px 1px #3699FC;
+            box-shadow: 1px 1px 1px rgb(211, 214, 22);
           }
         }
     }
@@ -118,7 +118,7 @@
                       tr {
                         
                         th {
-                          background-color: #f0f2f5;
+                          background-color: #f4f5f0;
                           border: 0;
                           font-family: 'Poppins'; 
                           font-weight: 600; 
