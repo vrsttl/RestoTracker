@@ -6,10 +6,13 @@ module.exports = function (app) {
   const mongooseClient = app.get('mongooseClient');
   const { Schema } = mongooseClient;
   const orders = new Schema({
-    text: { type: String, required: true }
+    items: [{ type: Schema.Types.Mixed }],
+    closed: { type: Boolean, required: true, default: false, },
+    summarized: { type: Boolean, required: true, default: false, },
+    parent: { type: Number, required: true }
   }, {
-    timestamps: true
-  });
+      timestamps: true
+    });
 
   return mongooseClient.model('orders', orders);
 };
