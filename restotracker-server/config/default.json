@@ -6,5 +6,43 @@
     "default": 10,
     "max": 50
   },
-  "mongodb": "mongodb+srv://vrsttl:a1a1s1s1d1d1@restotracker-n5j9v.mongodb.net/test?retryWrites=true"
+  "mongodb": "mongodb+srv://vrsttl:a1a1s1s1d1d1@restotracker-n5j9v.mongodb.net/test?retryWrites=true",
+  "authentication": {
+    "secret": "bbc6d459df01c04fd3b27eb2d0c30b8554db77187500b8ee44f3be93752df1ca997d8b951fea9b952dd310e1cf1b834a281ae05011b4ca9192de080661a26bb6e3031eba1bc74771942d4f74f52bba0242d2143fb71dbf1da934f69365a3485364f12d1dd8c6ef64cbf371d77c3ad76db0b6a028542f5f7bc6314528960a2a464ff15305c766b046d6545ba772109f8dbcd74583b3ab9bb2623aeb8cf96bb8f495217324c99d2b96a832c78778152aa81616d4f494c2c4271286f5895720f348e19b54546d5a053f90abb0c718920a69bba2cebaa400114359d2c45b7ee195d3ed486c441014b6a8684eaf672d7dc391ac348dfb5d70efbfdb813fe0e825ac60",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "google": {
+      "clientID": "your google client id",
+      "clientSecret": "your google client secret",
+      "successRedirect": "/",
+      "scope": [
+        "profile openid email"
+      ]
+    },
+    "cookie": {
+      "enabled": true,
+      "name": "feathers-jwt",
+      "httpOnly": false,
+      "secure": false
+    }
+  }
 }
