@@ -3,6 +3,8 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import path from 'path';
 import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 
+const Dotenv = require('dotenv-webpack');
+
 export default {
   resolve: {
     extensions: ['*', '.js', '.jsx', '.json']
@@ -17,6 +19,9 @@ export default {
   ],
   target: 'web',
   mode: 'development',
+  node: {
+    fs: 'empty'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'), // Note: Physical files are only output by the production build task `npm run build`.
     publicPath: '/',
@@ -26,6 +31,7 @@ export default {
     new HardSourceWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new Dotenv(),
     new HtmlWebpackPlugin({     // Create HTML file that includes references to bundled CSS and JS.
       template: 'src/index.ejs',
       minify: {

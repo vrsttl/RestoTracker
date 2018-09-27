@@ -1,7 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import { Redirect, Route, Switch } from 'react-router-dom';
-// import requireAuth from '../components/Auth';
+import { requireAuth } from '../components/Auth';
 import AsyncComponent from '../components/AsyncComponent';
 
 // const AsyncTable = AsyncComponent(() => import('containers/Table/Table'), this.props.match.params.id);
@@ -14,10 +14,10 @@ const AsyncNotFound = AsyncComponent(() => import('../containers/NotFound/NotFou
 
 const App = () => (
   <Switch>
-    <Redirect exact from="/" to={AsyncOpen} />
+    <Redirect exact from="/" to='/open' />
     <Route path="/login" component={AsyncLoginPage} />
 
-    {/* <Route exact path="/open" component={requireAuth(AsyncOpen)} /> */}
+    <Route exact path="/open" component={requireAuth(AsyncOpen)} />
     {/* <Route path="/open/:id" component={requireAuth(AsyncTable)} /> */}
 
     {/* <Route exact path="/closed" component={requireAuth(AsyncClosed)} /> */}
