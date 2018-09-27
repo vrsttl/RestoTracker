@@ -3,16 +3,16 @@ export default function user(state = {
   isAuthenticating: false,
   loginFailed: null,
   token: null,
-  email: null,
   username: null,
   firstName: null,
+  admin: false,
 }, action) {
   switch (action.type) {
     case 'USER_LOGIN_REQUESTED': {
       return {
         ...state,
         isAuthenticating: true,
-        email: action.values.username,
+        username: action.values.username,
         password: action.values.password,
       };
     }
@@ -23,7 +23,8 @@ export default function user(state = {
         isAuthenticating: false,
         isAuthenticated: true,
         token: action.token,
-        email: action.user.email,
+        username: action.user.username,
+        admin: action.user.admin,
       };
     }
     case 'LOGIN_SUCCEEDED': {
@@ -49,7 +50,6 @@ export default function user(state = {
         token: null,
         username: null,
         firstName: null,
-        email: null,
       };
     }
 

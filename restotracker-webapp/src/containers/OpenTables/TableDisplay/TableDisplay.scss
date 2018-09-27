@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200');
+@import 'src/styles/breakpoints';
+
+.card {
+  display: inline-block;
+  height: 204px;	
+  width: 280px;	
+  border-radius: 8px;	
+  background-color: #FFFFFF;	
+  box-shadow: 0 0 6px 0 rgba(178,178,178,0.5);
+  margin-bottom: 30px;
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 41.5px;
+    margin-right: 40px;
+  }
+  @include media-breakpoint-up(md) {
+    margin-bottom: 40px;
+    margin-right: 40px;
+  }
+}
+
+.titleLetter {	
+  height: 48px;	
+  width: 280px;	
+  color: #929292;	
+  font-family: "Poppins", sans-serif;	
+  font-size: 48px;	
+  font-weight: 200;	
+  line-height: 48px;	
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.title {
+  height: 24px;	
+  width: 280px;	
+  color: #929292;	
+  font-size: 18px;	
+  font-weight: 600;	
+  line-height: 24px;	
+  text-align: center;
+}
+
+.card-top {
+  height: 52px;
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-bot {
+  height: 68px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-top .ant-switch {
+  margin-left: 18px;
+  min-width: 28px;
+  height: 16px;
+}
+
+.card-top .ant-switch:before, .card-top .ant-switch:after {
+  width: 12px;
+  height: 12px;
+}
+
+.info {
+  margin-left: 6px;
+  margin-top: 12px;
+  height: 17px;		
+  color: #929292;	
+  font-size: 12px;	
+  line-height: 17px;	
+  display: inline-block;
+}
+
+.info.state {
+  margin-top: 12px;
+}
+
+.info.right {
+  margin-top: 31px;
+  margin-right: 18px;
+}
+
+.info.new {
+  margin-top: 31px;
+}
+
+.card-bot .left.ant-badge{
+  margin-left: 20px;
+}
+
+.card-top .ant-dropdown-link {
+  margin-top: 9px;
+  margin-right: 13px;
+  padding: 5px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+button {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}

@@ -9,9 +9,15 @@ export function login(values) {
   return {
     type: 'LOGIN_REQUESTED',
     payload: {
-      email: values.userName,
+      username: values.userName,
       password: values.password,
     },
+  };
+}
+
+export function getTables() {
+  return {
+    type: 'TABLES_REQUESTED',
   };
 }
 

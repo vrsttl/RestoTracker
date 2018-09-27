@@ -5,7 +5,8 @@ import * as API from '../services/api';
 
 function* login(action) {
   try {
-    const token = yield call(API.login, action.payload.email, action.payload.password);
+    console.log('login', action) // eslint-disable-line
+    const token = yield call(API.login, action.payload.username, action.payload.password);
     localStorage.setItem('token', token.accessToken);
     yield put({
       type: 'LOGIN_SUCCEEDED',

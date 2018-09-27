@@ -1,10 +1,11 @@
 import { app, socket } from '../store/store';
 
-export function login(email, password) {
+export function login(username, password) {
+  console.log('login api call', username, password); // eslint-disable-line
   return new Promise((resolve, reject) => {
     socket.emit('authenticate', {
       strategy: 'local',
-      email,
+      username,
       password,
     }, (error, data) => {
       if (error) {

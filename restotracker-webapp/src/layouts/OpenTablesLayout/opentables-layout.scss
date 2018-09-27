@@ -1,0 +1,66 @@
+@import 'src/styles/colors';
+@import 'src/styles/breakpoints';
+body {
+  overflow: visible;
+}
+
+.page-title {
+  width: 84px;
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+  @include media-breakpoint-up(sm) {
+    height: 36px;
+    width: 168px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  @include media-breakpoint-up(md) {
+    height: 56px;
+    width: 482px;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 56px;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 56px;
+    width: 482px;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 56px;
+  }
+}
+
+.opentables-subtitle {
+  height: 34px;
+  width: 327px;
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-top: 12px;
+  @include media-breakpoint-up(md) {
+    height: 20px;
+    width: 584px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  @include media-breakpoint-up(lg) {
+    height: 25px;
+    width: 750px;
+    font-size: 18px;
+    line-height: 27px;
+    margin-top: 18px;
+  }
+}
+
+.ant-layout .ant-layout-content {
+  background-color: #f0f2f5;
+}
