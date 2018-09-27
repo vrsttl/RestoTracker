@@ -19,7 +19,7 @@
       "header": {
         "typ": "access"
       },
-      "audience": "https://yourdomain.com",
+      "audience": "https://restotracker.app",
       "subject": "anonymous",
       "issuer": "feathers",
       "algorithm": "HS256",
