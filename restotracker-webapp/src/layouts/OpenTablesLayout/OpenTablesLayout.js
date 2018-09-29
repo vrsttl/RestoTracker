@@ -7,23 +7,29 @@ import './opentables-layout.scss';
 
 const { Content, Footer } = Layout;
 
-const OpenTables = ({ children }) => (
+const OpenTables = ({ children, loading }) => (
   <Layout className="opentables-layout">
-    <AppHeader
-      headerText="Our Tables"
-      headerSubtitle="You can see a list of our tables here."
-    />
+    {loading ? <AppHeader
+                  headerText="Loading page..."
+                  headerSubtitle=""
+                />
+             : <AppHeader
+                  headerText="Our Tables"
+                  headerSubtitle="You can see a list of our tables here."
+                />
+    }
     <Content>
       {children}
     </Content>
     <Footer style={{ textAlign: 'center' }}>
-        RestoTracker ©{moment().format('YYYY')}
+      RestoTracker ©{moment().format('YYYY')}
     </Footer>
   </Layout>
 );
 
 OpenTables.propTypes = {
   children: PropTypes.element,
+  loading: PropTypes.boolean,
 };
 
 OpenTables.defaultProps = {

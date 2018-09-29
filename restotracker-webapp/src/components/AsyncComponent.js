@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import BaseLayout from '../layouts/BaseLayout/BaseLayout';
 import { Table } from 'antd';
+import OpenTables from '../layouts/OpenTablesLayout/OpenTablesLayout';
 
 export function asyncComponent(importComponent, componentName) {
   class AsyncComponent extends Component {
@@ -24,7 +24,7 @@ export function asyncComponent(importComponent, componentName) {
             : 'noParentLogic'}
           {...this.props}
         />
-        : <BaseLayout><Table /></BaseLayout>;
+        : <OpenTables loading={true}><Table /></OpenTables>;
     }
   }
   return AsyncComponent;
