@@ -78,10 +78,24 @@ function* updateDrawer(value) {
   }
 }
 
+function* getTables() {
+  try {
+    const data = yield call(API.getData, 'tables');
+    console.log('saga', data.data) // eslint-disable-line
+    yield put({
+      type: 'TABLES_OK',
+      payload: data.data,
+    });
+  } catch (error) {
+    console.log(error); // eslint-disable-line
+  }
+}
+
 export default function* rootSaga() {
   yield takeEvery('LOGIN_REQUESTED', login);
   yield takeEvery('LOGOUT_REQUESTED', logout);
   yield takeEvery('RESTORE_USER_BY_TOKEN_REQUESTED', restoreUserByToken);
   yield takeEvery('DRAWER_UPDATE_REQUESTED', updateDrawer);
   yield takeEvery('COMPONENT_CHANGE_REQUESTED', componentChange);
+  yield takeEvery('TABLES_REQUESTED', getTables);
 }

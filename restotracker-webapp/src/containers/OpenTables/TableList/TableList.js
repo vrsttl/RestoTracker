@@ -14,16 +14,13 @@ class TableList extends Component {
     return (
       <div className="card-set">
         {
-          this.props.tables !== []
-          && (this.props.tables.map(element =>
+          this.props.tables.map(table =>
             (<TableDisplay
-              key={element._id}
-              id={element.id}
-              title={element.title}
-              default={element.default}
-              typeformId={element.typeformId}
+              key={table._id}
+              name={table.name}
+              toPay={table.currentconsumption}
             />),
-          ))
+          )
         }
       </div>
     );
@@ -32,7 +29,7 @@ class TableList extends Component {
 
 function mapStateToProps(store) {
   return {
-    workspaces: store.workspaces.data,
+    tables: store.getTables.tables,
   };
 }
 
